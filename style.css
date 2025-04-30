@@ -242,7 +242,7 @@ html,body{
 
 .scroll-fixed {
     position:relative;
-    height:250vh;
+    height:210vh;
     background-image:url("./images/purpleBg.png");
     background-repeat: no-repeat;
     background-size:cover;
@@ -264,6 +264,10 @@ html,body{
     top:20%;
 }
 
+.released {
+    top: 45%;
+  }
+
 .gradient {
     background: linear-gradient(90deg, #f97316, #8b5cf6);
     -webkit-background-clip: text;
@@ -275,12 +279,12 @@ html,body{
     display:flex;
     justify-content: center;
     width:100%;
-    top:40vh;
-    
+    top:40vh;    
 }
 
 .gradient-Img1 img{
     width:100%;
+    height:100%;
 }
 
 .gradient-Img-Box {
@@ -289,6 +293,46 @@ html,body{
     width:20rem;
 }
 
+.scroll-inner-Box {
+    position:absolute;
+    top:115vh;
+    width:100%;  
+    display:flex;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    gap:1.2rem;
+}
+
+.scroll-inner-Box img {
+    width:20rem;
+
+}
+
+#frame1-img-width img{
+    width:10rem;
+}
+
+.Frame1-Box {
+    display:flex;
+    justify-content: end;
+    
+}
+
+.Frame2-Box {
+
+}
+@media (min-width: 490px){
+    .scroll-inner-Box {
+        width:30rem;
+    }
+
+}
+
+
+
 @media (min-width: 768px){
     .main-text{
         font-size:2rem;
@@ -296,6 +340,15 @@ html,body{
    
     .gradient-Img-Box {
         width:50rem;
+    }
+
+    .scroll-inner-Box img {
+        width:22rem;
+    
+    }
+    
+    #frame1-img-width img{
+        width:12rem;
     }
 
 }

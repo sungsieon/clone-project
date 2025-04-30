@@ -81,9 +81,19 @@ function handleScroll() {
     const sectionHeight = section.offsetHeight;
     const scrollY = window.scrollY;
 
+    const fixedReleasePoint = sectionTop + 700;
+
     if(scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight){
-      mainText.classList.add('fixed');
-    }else{
+      if (scrollY >= fixedReleasePoint) {
+        mainText.classList.remove('fixed'); // release point 넘으면 fixed 풀림
+        mainText.classList.add("released")
+      } else {
+        mainText.classList.add('fixed'); // release point 이전이면 fixed 걸림
+        mainText.classList.remove("released");
+      }
+    } else {
       mainText.classList.remove('fixed');
+      mainText.classList.remove("released");
+  }
     }
- })
+ )
