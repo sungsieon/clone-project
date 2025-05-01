@@ -8,14 +8,14 @@ const mainText = document.querySelector('.main-text');
 const hoverScale = () => {
     contentImg.forEach((img, index) => {
       img.addEventListener("mouseenter", () => {
-        img.style.transform = "scaleY(1.5)";
+        img.style.transform = "scaleY(1.3)";
 
         if(contentImg[index - 1]){
-            contentImg[index - 1].style.transform = "scaleY(1.2)";
+            contentImg[index - 1].style.transform = "scaleY(1.1)";
          }
     
          if(contentImg[index + 1]){
-            contentImg[index + 1].style.transform = "scaleY(1.2)";
+            contentImg[index + 1].style.transform = "scaleY(1.1)";
          }
         
       })
@@ -81,14 +81,14 @@ function handleScroll() {
     const sectionHeight = section.offsetHeight;
     const scrollY = window.scrollY;
 
-    const fixedReleasePoint = sectionTop + 700;
+    const fixedReleasePoint = sectionTop + 600;
 
     if(scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight){
       if (scrollY >= fixedReleasePoint) {
-        mainText.classList.remove('fixed'); // release point 넘으면 fixed 풀림
+        mainText.classList.remove('fixed'); 
         mainText.classList.add("released")
       } else {
-        mainText.classList.add('fixed'); // release point 이전이면 fixed 걸림
+        mainText.classList.add('fixed'); 
         mainText.classList.remove("released");
       }
     } else {
@@ -97,3 +97,22 @@ function handleScroll() {
   }
     }
  )
+
+
+
+
+ const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, {
+  threshold: 1
+});
+
+
+const images = document.querySelectorAll('.scroll-inner-Box img');
+images.forEach(img => observer.observe(img));

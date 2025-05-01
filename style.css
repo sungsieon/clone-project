@@ -242,7 +242,7 @@ html,body{
 
 .scroll-fixed {
     position:relative;
-    height:210vh;
+    height:175vh;
     background-image:url("./images/purpleBg.png");
     background-repeat: no-repeat;
     background-size:cover;
@@ -252,7 +252,7 @@ html,body{
 
 .main-text{
     position:absolute;
-    top:7.2%;
+    top:10%;
     width:100%;
     text-align:center;
     font-size:1.3rem;
@@ -264,8 +264,12 @@ html,body{
     top:20%;
 }
 
+.logo-style {
+  width:2.5rem;
+}
+
 .released {
-    top: 45%;
+    top:45%;
   }
 
 .gradient {
@@ -295,7 +299,7 @@ html,body{
 
 .scroll-inner-Box {
     position:absolute;
-    top:115vh;
+    top:95vh;
     width:100%;  
     display:flex;
     flex-direction: column;
@@ -308,8 +312,13 @@ html,body{
 
 .scroll-inner-Box img {
     width:20rem;
-
+    opacity: 0;
+  transition: opacity 1s ease-out;
 }
+
+.scroll-inner-Box img.visible {
+    opacity: 1;
+  }
 
 #frame1-img-width img{
     width:10rem;
@@ -321,9 +330,8 @@ html,body{
     
 }
 
-.Frame2-Box {
 
-}
+
 @media (min-width: 490px){
     .scroll-inner-Box {
         width:30rem;
@@ -337,6 +345,10 @@ html,body{
     .main-text{
         font-size:2rem;
     }
+
+    .logo-style {
+        width:3.5rem;
+      }
    
     .gradient-Img-Box {
         width:50rem;
