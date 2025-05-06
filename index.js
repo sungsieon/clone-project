@@ -3,6 +3,8 @@
 const contentImg = document.querySelectorAll(".content_Img_Box");
 const section = document.querySelector('.scroll-fixed');
 const mainText = document.querySelector('.main-text');
+const videoSpans = document.querySelectorAll('.video-btn span');
+
 
 
 const hoverScale = () => {
@@ -116,3 +118,12 @@ function handleScroll() {
 
 const images = document.querySelectorAll('.scroll-inner-Box img');
 images.forEach(img => observer.observe(img));
+
+
+
+videoSpans.forEach((span) => {
+  span.addEventListener("click", () => {
+    videoSpans.forEach(s => s.classList.remove("active"));
+    span.classList.add("active");
+  })
+})
