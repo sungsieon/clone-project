@@ -40,41 +40,6 @@ const hoverScale = () => {
 hoverScale();
 //---------------------------------------------------------------------
 
-
-function handleScroll() {
-   const section = document.querySelector(".scrollImg_container");
-   const position = document.querySelector(".scrollImg_position");
- 
-   if (!section || !position) return;
- 
-   const sectionTop = section.offsetTop;
-   const sectionHeight = section.offsetHeight;
-   const scrollY = window.scrollY;
- 
-   const scrollRatio = Math.min(
-     Math.max((scrollY - sectionTop) / (sectionHeight - window.innerHeight), 0),
-     1
-   );
- 
-   position.style.transform = `translateX(${30 - scrollRatio * 80}vw)`;
- }
- 
- function toggleScrollEvent() {
-   if (window.innerWidth >= 748) {
-     window.addEventListener("scroll", handleScroll);
-   } else {
-     window.removeEventListener("scroll", handleScroll);
-   }
- }
- 
- document.addEventListener("DOMContentLoaded", () => {
-   toggleScrollEvent();
- });
- 
- window.addEventListener("resize", () => {
-   toggleScrollEvent();
-   handleScroll();
- });
  //---------------------------------------------------------------------
 
 
