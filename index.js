@@ -92,3 +92,18 @@ videoSpans.forEach((span) => {
     span.classList.add("active");
   })
 })
+
+//--------------------------------------------------------------------
+const $spans = $('.video-btn span');
+const $containers = $('.video-container');
+
+$spans.each(function(index){
+  $(this).on('click',function(){
+
+    $spans.removeClass('active');
+    $(this).addClass('active');
+
+    $containers.removeClass('show');
+    $containers.eq(index).addClass('show');
+  })
+})
