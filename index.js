@@ -107,3 +107,20 @@ $spans.each(function(index){
     $containers.eq(index).addClass('show');
   })
 })
+
+//--------------------------------------------------
+
+const boxes = document.querySelectorAll('.last-Box2, .last-Box3');
+
+const observer2 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('bottomMove');
+      observer2.unobserve(entry.target); // 한 번만 실행
+    }
+  });
+}, {
+  threshold: 0.2 // 20% 이상 보이면 실행
+});
+
+boxes.forEach(box => observer2.observe(box));
