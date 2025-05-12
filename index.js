@@ -120,7 +120,7 @@ const observer2 = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.2 // 20% 이상 보이면 실행
+  threshold: 0.6 // 20% 이상 보이면 실행
 });
 
 boxes.forEach(box => observer2.observe(box));
