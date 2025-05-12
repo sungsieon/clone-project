@@ -246,7 +246,7 @@ html,body{
 .scroll-fixed {
     position:relative;
     height:170vh;
-    background-image:url("./public/images/purpleBg.png");
+    background-image:url("/images/purpleBg.png");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
