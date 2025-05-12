@@ -60,6 +60,7 @@ html,body{
     justify-content: center;
     flex-direction:column;
     align-items: center;
+    margin-top:5rem;
 }
 
 .Intro_container h1 {
@@ -116,7 +117,7 @@ html,body{
     }
 
     .nav_right_btn {
-        width:40px;
+        width:30px;
     }
 
     .Intro_container h1 {
@@ -141,6 +142,7 @@ html,body{
         width:6rem;
     }
 }
+
 
 @media (min-width: 1350px){
     .content_Img_Box {
@@ -591,7 +593,7 @@ html,body{
     display:flex;
     flex-direction: column;
     align-items: center;
-    
+    padding:0 2rem 0 2rem;
 }
 
 footer p {
@@ -601,7 +603,7 @@ margin-top:5px;
 }
 
 footer ul li{
-    font-size:14px;
+    font-size:11px;
     list-style:none;
 }
 
@@ -620,4 +622,10 @@ footer ul li{
 
 .footer-Link-Img ul li{
     border-radius:40px;
+}
+
+@media (min-width:768px){
+    .footer ul li{
+    font-size:14px;
+    }
 }
